@@ -1,0 +1,91 @@
+[user]
+    signingkey = ***
+    email = shivanib134@gmail.com
+    name = Shivani Bhardwaj
+[core]
+    editor = vim
+    whitespace = fix,space-before-tab,-indent-with-non-tab,tabwidth=4,trailing-space,cr-at-eol
+[web]
+    browser = firefox
+[color "branch"]
+    current = yellow bold
+    local = green bold
+    remote = red bold
+[color "grep"]
+    matchSelected = yellow dim
+[color "diff"]
+    meta = cyan bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = green bold
+    changed = yellow bold
+[clean]
+    requireForce = true
+[commit]
+    verbose = 2
+[diff]
+    renames = true
+    tool = vimdiff3
+[difftool]
+    prompt = true
+[github]
+    user = inashivb
+[format]
+    from = true
+[blame]
+    blankBoundary = true
+[alias]
+    ## CHECK STATUS ##
+    s = status
+    ## GET REMOTE DATA ##
+    f = fetch
+    p = pull
+    ## CHECK DIFF ##
+    d = diff
+    dc = diff --cached
+    ## CHECKOUT ##
+    ch = checkout
+    chb = checkout -b
+    ## COMMIT ##
+    c = commit
+    cm = commit -m
+    ca = commit -a
+    cma = commit -am
+    cc = commit --amend
+    ## ADD ##
+    a = add
+    cf = clang-format
+    ## REBASE ##
+    rb = rebase
+    rs = rebase -i
+    rba = rebase --abort
+    rbc = rebase --continue
+    ## PUSH ##
+    pu = push origin HEAD
+    pf = push -f origin HEAD
+    ## LOG ##
+    l = log
+    ll = log --oneline
+    ## BRANCH ##
+    b = branch
+    ba = branch -a
+    bd = branch -d
+    bdr = branch -D
+    ## CLONE ##
+    cl = clone
+    cld = clone --depth 1
+    ## CHERRY-PICK ##
+    cp = cherry-pick
+    cpx = cherry-pick -x
+    cpa = cherry-pick --abort
+    cpc = cherry-pick --continue
+    ## RESET ##
+    re = reset
+    rh = reset HEAD
+    ## STASH ##
+    sa = stash apply
+    sd = stash drop
+    sp = stash pop
+    ss = stash show
