@@ -123,15 +123,28 @@ PATH=$PATH:/home/$USER/.cargo/bin:/home/$USER/.local/bin:/home/$USER/bin
 ssh-add ~/.ssh/id_rsa &>/dev/null
 
 source ~/.git-completion
+source "$HOME/.cargo/env"
 
 gcf() {
     git add "$1"
     git clang-format
     git add "$1"
 }
+
+gpr() {
+    IFS=':' read -ra ADDR <<< "$2"
+    for i in "${ADDR[@]}"; do
+        BRNAME="$i"
+    done
+    git fetch upstream pull/"$1"/head:"$BRNAME"
+    git checkout "$BRNAME"
+}
+
 alias g='git'
 alias python='python3'
-source "$HOME/.cargo/env"
+alias x='xclip -selection clipboard'
+alias fclang='git rebase master -x "git clang-format HEAD~"'
+alias tipcheck='git rebase master -x make'
+
 export ac_cv_func_malloc_0_nonnull=yes
 export ac_cv_func_realloc_0_nonnull=yes
-alias x='xclip -selection clipboard'

@@ -83,6 +83,3 @@ set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 set pastetoggle=<F2>
 nnoremap ; :
-au FileType python setlocal formatprg=autopep8\ -
-
-let g:rustfmt_autosave = 1

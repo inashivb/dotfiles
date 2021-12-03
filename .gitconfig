@@ -89,3 +89,5 @@
     sd = stash drop
     sp = stash pop
     ss = stash show
+    ## WORKTREE ##
+    wl = worktree list
