@@ -5,8 +5,11 @@
 [core]
     editor = vim
     whitespace = fix,space-before-tab,-indent-with-non-tab,tabwidth=4,trailing-space,cr-at-eol
+    excludesfile = /home/$USER/.gitignore_global
 [web]
     browser = firefox
+[branch "master"]
+    pushRemote = false
 [color "branch"]
     current = yellow bold
     local = green bold

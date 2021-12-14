@@ -1,0 +1,22 @@
+# Vim temp files
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+
+# C object files
+*.o
+*.ko
+*.obj
+
+# C libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Rust
+debug/
+target/
+Cargo.lock
+**/*.rs.bk
