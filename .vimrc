@@ -30,10 +30,14 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'valloric/youcompleteme'
 Plugin 'rust-lang/rust.vim'
+Plugin 'rust-analyzer/rust-analyzer'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Zenburn'
+Plugin 'pseewald/anyfold'
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -70,10 +74,17 @@ set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 set history=10000         " remember more commands and search history
 set undolevels=10000      " use many muchos levels of undo
-set wildignore=*.swp,*.bak,*.pyc,*.class
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.o
 set title                " change the terminal's title
 set visualbell           " don't beep
 set noerrorbells         " don't beep
+set cursorline
+set cursorcolumn
+set laststatus=2
+set directory=$HOME/.vim/swp//
+set backupdir=$HOME/.vim/backup//
+set undodir=$HOME/.vim/undodir//
+set tags+=$HOME/.vim/ctags//
 
 filetype plugin indent on
 
@@ -83,3 +94,49 @@ set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 set pastetoggle=<F2>
 nnoremap ; :
+nnoremap n nzz
+nnoremap N Nzz
+
+vnoremap . :normal.<CR>
+
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_winsize = 20
+
+set foldenable "Enable folding
+set foldlevelstart=10 "Open most of the folds by default. If set to 0, all folds will be closed.
+set foldnestmax=10 "Folds can be nested. Setting a max value protects you from too many folds.
+set foldmethod=manual "Defines the type of folding.
+
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+
+" Color name (:help gui-colors) or RGB color
+let g:limelight_conceal_guifg = 'DarkGray'
+let g:limelight_conceal_guifg = '#777777'
+
+" Default: 0.5
+let g:limelight_default_coefficient = 0.7
+
+" Number of preceding/following paragraphs to include (default: 0)
+let g:limelight_paragraph_span = 10
+
+" Beginning/end of paragraph
+"   When there's no empty line between the paragraphs
+"   and each paragraph starts with indentation
+let g:limelight_bop = '^\s'
+let g:limelight_eop = '\ze\n^\s'
+
+" Highlighting priority (default: 10)
+"   Set it to -1 not to overrule hlsearch
+let g:limelight_priority = -1
+
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+augroup toggle_relative_number
+autocmd InsertEnter * :setlocal norelativenumber
+autocmd InsertLeave * :setlocal relativenumber
+
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif

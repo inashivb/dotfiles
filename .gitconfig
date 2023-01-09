@@ -5,7 +5,7 @@
 [core]
     editor = vim
     whitespace = fix,space-before-tab,-indent-with-non-tab,tabwidth=4,trailing-space,cr-at-eol
-    excludesfile = /home/$USER/.gitignore_global
+    excludesfile = /home/ard/.gitignore_global
 [web]
     browser = firefox
 [branch "master"]
@@ -35,8 +35,12 @@
     prompt = true
 [github]
     user = inashivb
+[gitlab]
+    user = ***
 [format]
     from = true
+[help]
+    autocorrect = immediate
 [blame]
     blankBoundary = true
 [alias]
@@ -84,6 +88,10 @@
     cpx = cherry-pick -x
     cpa = cherry-pick --abort
     cpc = cherry-pick --continue
+    ## MERGE-REQUESTS ##
+    mr = !sh -c \"git fetch upstream merge-requests/${1}/head:mr/${1} && git checkout mr/${1}\"
+    ## PULL-REQUESTS ##
+    pr = !sh -c \"git fetch upstream pull/${1}/head:pr/${1} && git checkout pr/${1}\"
     ## RESET ##
     re = reset
     rh = reset HEAD

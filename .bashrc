@@ -145,6 +145,11 @@ alias python='python3'
 alias x='xclip -selection clipboard'
 alias fclang='git rebase master -x "git clang-format HEAD~"'
 alias tipcheck='git rebase master -x make'
+alias tmux="tmux -u"
 
 export ac_cv_func_malloc_0_nonnull=yes
 export ac_cv_func_realloc_0_nonnull=yes
+export ASAN_OPTIONS="abort_on_error=1"
+export TERM="xterm-256color"
+
+eval "$(starship init bash)"
