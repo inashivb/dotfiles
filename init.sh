@@ -30,16 +30,6 @@ rm zoom_amd64.deb
 # Get back Home
 cd
 
-# Generate SSH keys, add to agent
-ssh-keygen -t ed25519 -C "shivanib134@gmail.com"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-
-# Generate GPG Keys
-gpg --full-generate-key
-gpg --list-secret-keys --keyid-format=long
-# Post steps: gpg --armor --export *** | x
-
 # Download and source dotfiles
 wget  https://github.com/inashivb/dotfiles/raw/master/.bashrc
 wget  https://github.com/inashivb/dotfiles/raw/master/.vimrc
