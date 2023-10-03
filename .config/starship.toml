@@ -1,0 +1,63 @@
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+# makes prompt a single line
+[line_break]
+disabled = false
+
+[cmd_duration]
+min_time = 10_000  # Show command duration over 10,000 milliseconds (= 10 sec)
+format = "took [$duration]($style)"
+
+# Clear visibility for exit codes
+[status]
+style = "bg:red"
+symbol = "💣 "
+format = '[\[$symbol$status\]]($style) '
+disabled = false
+
+[git_branch]
+symbol = '🌱 '
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = '🔖 '
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+
+[git_status]
+conflicted = '🏳'
+ahead = '🏎💨'
+behind = '😰'
+diverged = '😵'
+up_to_date = '✓'
+untracked = '🤷'
+stashed = '📦'
+modified = '📝'
+staged = '[++\($count\)](green)'
+renamed = '👅'
+deleted = '🗑'
+
+[rust]
+format = 'via [⚙️ $version](red bold)'
+
+[python]
+symbol = '👾 '
+pyenv_version_name = true
+disabled = true
+
+[c]
+format = 'via [$name $version]($style)'
+
+[shell]
+bash_indicator = ''
+style = 'cyan bold'
+disabled = false
+
+[container]
+format = '[$symbol \[$name\]]($style) '
+
+[lua]
+disabled = true
