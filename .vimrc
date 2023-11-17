@@ -38,6 +38,8 @@ Plugin 'Zenburn'
 Plugin 'pseewald/anyfold'
 Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/limelight.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'preservim/vim-markdown'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -107,6 +109,16 @@ set foldenable "Enable folding
 set foldlevelstart=10 "Open most of the folds by default. If set to 0, all folds will be closed.
 set foldnestmax=10 "Folds can be nested. Setting a max value protects you from too many folds.
 set foldmethod=manual "Defines the type of folding.
+
+fu! EnableJsonFoldSyntax()
+    set filetype=json
+    set syntax=on
+    set foldmethod=syntax
+endf
+
+command! Jfs call EnableJsonFoldSyntax()
+
+set tags+=$HOME/.vim/tags
 
 " Color name (:help cterm-colors) or ANSI code
 let g:limelight_conceal_ctermfg = 'gray'
