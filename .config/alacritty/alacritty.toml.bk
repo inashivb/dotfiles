@@ -1,0 +1,22 @@
+#[general]
+#import = [ "~/.config/alacritty/themes/themes/remedy_dark.toml" ]
+
+[font]
+size = 6.0
+
+[window]
+title = ""
+opacity = 0.0
+dynamic_title = true
+
+[scrolling]
+history= 10000
+multiplier= 5
+
+[cursor]
+unfocused_hollow= true
+style = {Block, Always}
+
+[terminal]
+shell = /bin/bash
+

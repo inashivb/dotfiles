@@ -9,6 +9,10 @@ disabled = false
 min_time = 10_000  # Show command duration over 10,000 milliseconds (= 10 sec)
 format = "took [$duration]($style)"
 
+[directory]
+format='[$path]($style)[$read_only]($read_only_style) '
+truncate_to_repo=false
+
 # Clear visibility for exit codes
 [status]
 style = "bg:red"

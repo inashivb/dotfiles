@@ -2,4 +2,5 @@
 
 pkill polybar
 
-polybar i3wmthemer_bar &
+polybar --config=/home/ard/.config/polybar/config.ini i3wmthemer_bar
+#polybar i3wmthemer_bar &

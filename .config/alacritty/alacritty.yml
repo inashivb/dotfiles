@@ -1,0 +1,30 @@
+font:
+  size: 6.0
+
+window:
+  title: ""
+  opacity: 0.9
+  dynamic_title: true
+  decorations: Full
+  padding:
+    x: 5
+    y: 5
+
+scrolling:
+  history: 10000
+  multiplier: 5
+
+cursor:
+  unfocused_hollow: true
+  style:
+    shape: Block
+    blinking: Always
+
+terminal:
+  shell: /bin/bash
+
+keyboard:
+  bindings:
+    - key: Return
+      mods: Control|Shift
+      action: SpawnNewInstance
