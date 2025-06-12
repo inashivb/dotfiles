@@ -46,7 +46,8 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 if &t_Co >= 256 || has("gui_running")
-    colorscheme zenburn
+"    colorscheme zenburn
+    colorscheme desert
 endif
 
 if &t_Co > 2 || has("gui_running")
@@ -98,12 +99,13 @@ set pastetoggle=<F2>
 nnoremap ; :
 nnoremap n nzz
 nnoremap N Nzz
-
 vnoremap . :normal.<CR>
 
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_winsize = 20
+
+let g:ycm_autoclose_preview_window_after_completion=1
 
 set foldenable "Enable folding
 set foldlevelstart=10 "Open most of the folds by default. If set to 0, all folds will be closed.
@@ -118,6 +120,7 @@ endf
 
 command! Jfs call EnableJsonFoldSyntax()
 
+set clipboard=unnamed
 set tags+=$HOME/.vim/tags
 
 " Color name (:help cterm-colors) or ANSI code

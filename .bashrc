@@ -153,3 +153,4 @@ export ASAN_OPTIONS="abort_on_error=1"
 export TERM="xterm-256color"
 
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"

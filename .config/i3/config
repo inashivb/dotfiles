@@ -185,4 +185,8 @@ mode "resize" {
 
 bindsym $mod+p mode "resize"
 
+## Screenshots; require flameshot installation
+bindsym $mod+Print       exec flameshot full -p $HOME/Pictures/Screenshots/
+bindsym $mod+Shift+Print exec flameshot gui -p $HOME/Pictures/Screenshots/
+
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

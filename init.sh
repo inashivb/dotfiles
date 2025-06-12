@@ -6,7 +6,7 @@
 sudo apt install vim gcc traceroute curl nmap mlocate wget git \
     xclip ffmpeg libtool libpcre2-dev python3 python3-pip \
     libyaml-dev libjansson-dev libpcap-dev libcap-ng-dev \
-    libmagic-dev liblz4-dev cmake clang-format
+    libmagic-dev liblz4-dev cmake clang-format flameshot
 
 # Vundle for Vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim

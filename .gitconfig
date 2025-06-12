@@ -1,11 +1,11 @@
 [user]
-    signingkey = ***
     email = shivanib134@gmail.com
     name = Shivani Bhardwaj
 [core]
     editor = vim
     whitespace = fix,space-before-tab,-indent-with-non-tab,tabwidth=4,trailing-space,cr-at-eol
     excludesfile = /home/ard/.gitignore_global
+#    pager = delta
 [web]
     browser = firefox
 [branch "master"]
@@ -28,9 +28,13 @@
     requireForce = true
 [commit]
     verbose = 2
+	gpgsign = false
 [diff]
     renames = true
     tool = vimdiff3
+    algorithm = histogram
+[merge]
+    conflictstyle = diff3
 [difftool]
     prompt = true
 [github]
@@ -43,6 +47,9 @@
     autocorrect = immediate
 [blame]
     blankBoundary = true
+[clangformat]
+    binary = clang-format-18
+    extensions = c,h
 [alias]
     ## CHECK STATUS ##
     s = status
