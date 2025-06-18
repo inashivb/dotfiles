@@ -122,7 +122,7 @@ PATH=$PATH:/home/$USER/.cargo/bin:/home/$USER/.local/bin:/home/$USER/bin
 
 ssh-add ~/.ssh/id_rsa &>/dev/null
 
-source ~/.git-completion
+source ~/.git-completion.bash
 source "$HOME/.cargo/env"
 
 gcf() {
