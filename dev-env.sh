@@ -19,6 +19,10 @@ git clone git@github.com:inashivb/suricata-intel-index.git
 
 # Go to Suricata and build it
 cd suricata
+
+# Set upstream
+git remote add upstream git@github.com:oisf/suricata.git
+
 make clean
 
 ./autogen.sh
