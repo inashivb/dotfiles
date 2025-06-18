@@ -36,5 +36,5 @@ curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh 
 curl -sS https://starship.rs/install.sh | sh
 
 # Install i3
-sudo apt install i3 polybar rofi alacritty
+sudo apt install i3 polybar rofi alacritty fonts-font-awesome
 cp -r .config ~/
