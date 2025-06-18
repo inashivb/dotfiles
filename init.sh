@@ -5,7 +5,7 @@
 # Install all necessary packages
 sudo apt install vim gcc traceroute curl nmap wget git \
     xclip ffmpeg python3 python3-pip \
-    cmake clang-format flameshot g++
+    cmake clang-format flameshot g++ wireshark
 
 # Vundle for Vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
